@@ -62,7 +62,11 @@ export default function task() {
                   }`}
                 >
                   <h1 className="font-bold text-xl">{task.title}</h1>
-                  <p>{task.status}</p>
+                  <p className={`p-2 px-4 rounded-3xl m-2 w-fit ${task.status === "Completed"
+                      ? "text-green-500 bg-green-200"
+                      : task.status === "In Progress"
+                      ? "text-yellow-500 bg-yellow-200"
+                      : "text-red-500 bg-red-200" }`}>{task.status}</p>
                   <p>{task.description}</p>
                   <p>{task.dueDate}</p>
                 </div>
