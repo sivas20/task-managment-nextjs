@@ -45,7 +45,7 @@ export default function task() {
   ];
   return (
     <>
-      <div className="flex justify-center bg-orange-200 h-max">
+      <div className="flex justify-center bg-orange-200 h-screen">
         <div className="flex-col bg-white h-fit p-4 m-8 rounded-xl shadow-lg shadow-white/50 ">
           <h1 className="text-4xl font-bold mt-8 mb-2">Tasks</h1>
           <div className="flex-row mt-4">
@@ -53,7 +53,7 @@ export default function task() {
               {tasks.map((task) => (
                 <div
                   key={task.id}
-                  className={`mb-4 shadow-lg p-6 rounded-lg ${
+                  className={`mb-4 flex justify-between shadow-lg p-6 rounded-lg ${
                     task.status === "Completed"
                       ? "shadow-green-500/30"
                       : task.status === "In Progress"
@@ -61,23 +61,30 @@ export default function task() {
                       : "shadow-red-500/30"
                   }`}
                 >
-                  <h1 className="font-bold text-xl">{task.title}</h1>
-                  <p className={`p-2 px-4 rounded-3xl m-2 w-fit ${task.status === "Completed"
-                      ? "text-green-500 bg-green-200"
-                      : task.status === "In Progress"
-                      ? "text-yellow-500 bg-yellow-200"
-                      : "text-red-500 bg-red-200" }`}>{task.status}</p>
-                  <p>{task.description}</p>
-                  <p>{task.dueDate}</p>
+                  <div>
+                    <h1 className="font-bold text-xl">{task.title}</h1>
+
+                    <p>{task.description}</p>
+                    <p>{task.dueDate}</p>
+                  </div>
+                  <div className="flex justify-center items-center">
+                    <p
+                      className={`p-2 px-4 rounded-3xl m-2 w-fit ${
+                        task.status === "Completed"
+                          ? "text-green-500 bg-green-200"
+                          : task.status === "In Progress"
+                          ? "text-yellow-500 bg-yellow-200"
+                          : "text-red-500 bg-red-200"
+                      }`}
+                    >
+                      {task.status}
+                    </p>
+                    <span className="rounded-2xl bg-blue-200 text-blue-500 hover:bg-blue-500 hover:text-white p-3 mr-4">Edit</span>
+                    <span className="rounded-2xl bg-red-200 text-red-500 hover:bg-red-500 hover:text-white p-3 mr-4">delete</span>
+                  </div>
                 </div>
               ))}
             </div>
-            {/* <div className="p-2 rounded-xl text-black mb-3">
-              <h1 className="font-bold text-lg">Incomplete</h1>
-            </div>
-            <div className="p-2 rounded-xl text-black ">
-              <h1 className="font-bold text-lg">Complete</h1>
-            </div> */}
           </div>
         </div>
       </div>
