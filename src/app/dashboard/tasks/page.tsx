@@ -80,6 +80,9 @@ export default function task() {
                       {task.status}
                     </p>
                     <span className="rounded-2xl bg-blue-200 text-blue-500 hover:bg-blue-500 hover:text-white p-3 mr-4">Edit</span>
+                    {task.status ==="Completed" && (
+                      <span className="rounded-2xl p-2  mr-4 bg-green-500 text-white">Mark as Complete</span>
+                    )  }
                     <span className="rounded-2xl bg-red-200 text-red-500 hover:bg-red-500 hover:text-white p-3 mr-4">delete</span>
                   </div>
                 </div>
