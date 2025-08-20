@@ -30,7 +30,7 @@ export default function analytics() {
   return (
     <>
       <div className="flex flex-col items-center justify-center mt-8">
-        <h1 className="text-5xl font-bold mb-2">Analysis Dashboard</h1>
+        <h1 className="text-2xl font-bold mb-2">Analysis Dashboard</h1>
         <div className="flex mt-4">
           {data.map((p, i) => (
             <div
@@ -42,7 +42,7 @@ export default function analytics() {
               }`}
             >
               <div className="m-2">
-                <h1 className="text-lg">{p.title}</h1>
+                <h1 className="text-md">{p.title}</h1>
                 <p>{p.value}</p>
               </div>
 
@@ -52,23 +52,23 @@ export default function analytics() {
             </div>
           ))}
         </div>
-        <div className="mt-4 bg-amber-50 w-auto p-3 mb-2">
-          <h1 className="text-2xl font-bold">Website Traffic</h1>
-          <div className="bg-gray-100 text-lg p-4 rounded-lg w w-200 h-90 font-bold">
+        <div className="mt-4 bg-amber-50 w-auto p-3">
+          <h1 className="text-lg font-bold">Website Traffic</h1>
+          <div className="bg-gray-100 text-md p-4 rounded-md w w-200 h-90 font-bold">
             Charts placeholder
           </div>
         </div>
-         <div className="mt-4 bg-amber-50 w-auto p-3 mb-2">
-          <h1 className="text-2xl font-bold">Website Traffic</h1>
-          <div className="bg-gray-100 text-lg p-4 rounded-lg w w-200 h-90 font-bold">
+         <div className="bg-amber-50 w-auto p-3">
+          <h1 className="text-lg font-bold">Website Traffic</h1>
+          <div className="bg-gray-100 text-md p-4 rounded-lg w w-200 h-90 font-bold">
             Charts placeholder
           </div>
         </div>
-        <div className="mt-2 bg-amber-50 w-auto p-3 mb-2">
-            <h1 className="text-2xl font-bold">Recent Activities</h1>
+        <div className="bg-amber-50 w-auto p-3">
+            <h1 className="text-lg font-bold">Recent Activities</h1>
            <div className="bg-gray-50 flex justify-between p-4 rounded-lg w-200 h-auto">
              <div>
-                <h1 className="text-lg font-bold">User Registrations</h1>
+                <h1 className="text-md font-bold">User Registrations</h1>
                 <p>New User signed up on 2025-08-18</p>
             </div>
             <div className=" flex items-center justify-center">
@@ -77,7 +77,7 @@ export default function analytics() {
            </div>
            <div className="mt-3 bg-gray-50 p-4 flex justify-between rounded-lg w-200 h-auto">
              <div >
-                <h1 className="text-lg font-bold">Sales Increases</h1>
+                <h1 className="text-md font-bold">Sales Increases</h1>
                 <p>Sales grew by 12% on 2025-08-18</p>
             </div>
              <div className=" flex items-center justify-center">

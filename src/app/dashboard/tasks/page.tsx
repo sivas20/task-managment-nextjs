@@ -45,9 +45,9 @@ export default function task() {
   ];
   return (
     <>
-      <div className="flex justify-center bg-orange-200 h-screen">
+      <div className="flex justify-center bg-orange-200 h-full">
         <div className="flex-col bg-white h-fit p-4 m-8 rounded-xl shadow-lg shadow-white/50 ">
-          <h1 className="text-4xl font-bold mt-8 mb-2">Tasks</h1>
+          <h1 className="text-2xl font-bold mt-8 mb-2">Tasks</h1>
           <div className="flex-row mt-4">
             <div className="p-2 rounded-xl w-3xl text-black mb-3">
               {tasks.map((task) => (
@@ -62,7 +62,7 @@ export default function task() {
                   }`}
                 >
                   <div>
-                    <h1 className="font-bold text-xl">{task.title}</h1>
+                    <h1 className="font-bold text-lg">{task.title}</h1>
 
                     <p>{task.description}</p>
                     <p>{task.dueDate}</p>
@@ -80,7 +80,7 @@ export default function task() {
                       {task.status}
                     </p>
                     <span className="rounded-2xl bg-blue-200 text-blue-500 hover:bg-blue-500 hover:text-white p-3 mr-4">Edit</span>
-                    {task.status ==="Completed" && (
+                    {task.status !="Completed" && (
                       <span className="rounded-2xl p-2  mr-4 bg-green-500 text-white">Mark as Complete</span>
                     )  }
                     <span className="rounded-2xl bg-red-200 text-red-500 hover:bg-red-500 hover:text-white p-3 mr-4">delete</span>
