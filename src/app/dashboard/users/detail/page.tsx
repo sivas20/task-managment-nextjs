@@ -1,21 +1,4 @@
-import user from "../page";
-
-interface Activity {
-  id: number;
-  description: string;
-  timestamp: string;
-}
-
-interface User {
-  name: string;
-  email: string;
-  role: string; 
-  status: string;
-  bio: string;
-  profilePicture: string;
-  activities: Activity[];
-}
-
+import Image from "next/image";
 export default function detail() {
 
   const data =
@@ -46,7 +29,7 @@ export default function detail() {
       <div className="flex flex-col p-6 max-w-300 mx-auto rounded-xl shadow-xl bg-amber-50">
         <div className="flex">
           <div className="max-w-40 mr-4 mt-4">
-            <img
+            <Image
               className="rounded-full h-40"
               src={data.profilePicture}
               alt="Not Founded !"

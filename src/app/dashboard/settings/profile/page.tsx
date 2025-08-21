@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function profile() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-200 to-purple-400 p-10">
@@ -6,7 +7,7 @@ export default function profile() {
         <div className=" p-2 flex flex-col items-center justify-center">
           <h2 className="text-lg">Profile Picture</h2>
           <div className="max-w-40  mt-4">
-            <img
+            <Image
               className="rounded-full h-40"
               src="https://images.unsplash.com/photo-1466112928291-0903b80a9466?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Not Founded !"
